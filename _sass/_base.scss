@@ -1,0 +1,276 @@
+* {
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  @include vendor(box-sizing, border-box);
+}
+html {
+  font-size:62.5%;
+}
+body {
+  font: 400 15px/1.5 'Helvetica Neue', Helvetica, Arial;
+  background: #fff;
+  color: #444;
+}
+a {
+  color: #444;
+  font-weight: 900;
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -1px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  letter-spacing: -2px;
+}
+h6 {
+  font-size: 15px;
+  margin: 10px 0 0;
+  border-bottom: 1px solid #eee;
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+p {
+  > code {
+    background-color: #f5f6f5;
+    padding: 1px 5px;
+    @include vendor(border-radius, 3px);
+  }
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+.main {
+  margin: 0 0 0 340px;
+}
+/* ul */.posts__list {
+  li {
+    a {
+      display: block;
+      padding: 20px 25px;
+    }
+  }
+}
+.posts__title {
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+.posts__date {
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  padding: 0 0 10px;
+}
+.post,
+.page {
+  h3 {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    margin: 10px 0 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+    font-style: italic;
+  }
+  ul {
+    li {
+      a {
+        font-weight: 900;
+      }
+    }
+  }
+}
+.post__title,
+.page__title {
+  font-size: 30px;
+  margin: 35px 0 0;
+}
+.page__title {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+.post__meta {
+  margin: 5px 0 25px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px;
+  p {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+  }
+}
+.post__meta-edit {
+  position: relative;
+  display: inline-block;
+  background: #f5f6f5;
+  color: #444;
+  padding: 2px 8px 2px 25px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  i {
+    font-size: 14px;
+    @include position(absolute, 4px 0 0 7px);
+  }
+}
+.download-box {
+  margin: 0 0 15px;
+  a {
+    @include vendor(border-radius, 3px);
+    display: inline-block;
+    background: #444;
+    color: #fff;
+    padding: 8px 20px;
+    font-weight: 900;
+    margin: 0 10px 0 0;
+  }
+}
+.about {
+
+}
+.about__talk {
+  float: left;
+  margin: 25px 20px 10px 0;
+  img {
+    border-radius: 3px;
+  }
+}
+.pagination {
+  background: #f5f6f5;
+  color: #444;
+  a,
+  span {
+    @include vendor(border-radius, 3px);
+    padding: 15px 25px;
+    display: inline-block;
+ }
+ a {
+  color: #444;
+  background: #f5f6f5;
+  &:hover {
+    background: darken(#f5f6f5, 5%);
+  }
+ }
+}
+.pagination--previous {
+  float: left;
+  width: 50%;
+}
+.pagination--next {
+  text-align: right;
+  float: right;
+  width: 50%;
+}
+.social {
+  padding: 20px;
+  background: #f5f6f5;
+  margin: 30px 0 50px;
+}
+.social__button {
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 20px;
+}
+.disqus {
+  margin:0 0 10px;
+}
