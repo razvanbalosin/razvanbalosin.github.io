@@ -22,6 +22,18 @@
     }
 }
 
+.site-avatar {
+    max-width: 45px;
+    display: inline-block;
+    float: left;
+    line-height: 51px;
+    margin-right: 5px;
+
+    > img {
+        @include vendor(border-radius, 5px);
+    }
+}
+
 .site-nav {
     float: right;
     line-height: 56px;

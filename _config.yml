@@ -2,7 +2,7 @@
 title: Razvan Balosin
 email: contact@razvanbalosin.com
 description: > # this means to ignore newlines until "baseurl:"
-  Front End engineer with a passion for JavaScript, AngularJS and HTML5
+  Front end engineer with a passion for JavaScript, AngularJS and HTML5
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://razvanbalosin.com" # the base hostname & protocol for your site
 twitter_username: razvanbalosin
