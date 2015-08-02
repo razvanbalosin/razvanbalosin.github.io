@@ -4,5 +4,5 @@ node_modules
 .tmp
 .sass-cache
 _config.yml
-_robots.txt
+robots.txt
 *.sublime-*
