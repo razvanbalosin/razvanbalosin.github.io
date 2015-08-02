@@ -183,6 +183,6 @@ The directives add the `st-selected` class to every row that is selected, so in 
 
 ### See it in action
 
-<iframe style="width: 100%; height: 500px" src="http://embed.plnkr.co/iIVlfFZpmXrRvc7rLkFf" frameborder="0" allowfullscren="allowfullscren"></iframe>
+<iframe width="100%" height="550" src="http://embed.plnkr.co/iIVlfFZpmXrRvc7rLkFf" frameborder="0" allowfullscren="allowfullscren"></iframe>
 
 And that’s it! If you think the above can be improved, let me know in the comments below. Hope this was helpful.
