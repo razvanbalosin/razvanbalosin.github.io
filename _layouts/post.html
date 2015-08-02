@@ -7,15 +7,22 @@ layout: default
         {{ page.title }}
       </h1>
       <div class="post__meta">
-        {%if page.path %}
+<!--         {% if page.path %}
         <a class="post__meta-edit" href="//github.com/razvanbalosin/razvanbalosin.github.io/blob/master/_posts/{{ page.path }}">
           <i class="fa fa-github"></i>
           Edit this page on GitHub
         </a>
-        {% endif %}
-        <p>
+        {% endif %} -->
+        {% if page.date %}
+        <span class="post__meta-edit">
+          <i class="fa fa-calendar"></i>
           {{ page.date | date: "%B %d, %Y" }}
-        </p>
+        </span>
+        {% endif %}
+        <span class="post__meta-edit__right">
+          <i class="fa fa-clock-o"></i>
+          {{ page.content | reading_time }}
+        </span>
       </div> 
 
       {{ content }}

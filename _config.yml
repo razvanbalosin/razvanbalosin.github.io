@@ -12,3 +12,5 @@ github_username:  razvanbalosin
 markdown: kramdown
 paginate: 2
 paginate_path: "/page:num/"
+sass:
+    style: :compressed

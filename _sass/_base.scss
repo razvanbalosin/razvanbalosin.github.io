@@ -220,6 +220,21 @@ blockquote {
     @include position(absolute, 4px 0 0 7px);
   }
 }
+.post__meta-edit__right {
+  position: relative;
+  display: inline-block;
+  background: #f5f6f5;
+  color: #444;
+  padding: 2px 8px 2px 25px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  float:right;
+  i {
+    font-size: 14px;
+    @include position(absolute, 4px 0 0 7px);
+  }
+}
 .download-box {
   margin: 0 0 15px;
   a {
