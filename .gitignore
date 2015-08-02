@@ -5,5 +5,7 @@ node_modules
 .tmp
 .sass-cache
 _config.yml
+.travis.yml
+package.json
 robots.txt
 *.sublime-*
