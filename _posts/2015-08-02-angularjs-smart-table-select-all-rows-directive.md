@@ -117,52 +117,54 @@ Next, in order to get data from the selected rows, I’ve created two functions.
 ###### app.js
 {% highlight javascript %}
 function MainCtrl() { 
+
+  var vm = this;
   
   // Declare the array for the selected items
-  this.selected = []; 
+  vm.selected = []; 
   
   // Function to get data for all selected items
-  this.selectAll = function (collection) {
+  vm.selectAll = function (collection) {
     
     // if there are no items in the 'selected' array, 
     // push all elements to 'selected'
-    if (this.selected.length === 0) {
+    if (vm.selected.length === 0) {
       
       angular.forEach(collection, function(val) {
         
-        this.selected.push(val.id); 
+        vm.selected.push(val.id); 
         
-      }.bind(this));
+      });
       
     // if there are items in the 'selected' array, 
     // add only those that ar not
-    } else if (this.selected.length > 0 && this.selected.length != this.data.length) {
+    } else if (vm.selected.length > 0 && vm.selected.length != vm.data.length) {
       
       angular.forEach(collection, function(val) {
         
-        var found = this.selected.indexOf(val.id);
+        var found = vm.selected.indexOf(val.id);
         
-        if(found == -1) this.selected.push(val.id);
+        if(found == -1) vm.selected.push(val.id);
         
-      }.bind(this));
+      });
       
     // Otherwise, remove all items
     } else  {
       
-      this.selected = [];
+      vm.selected = [];
       
     }
     
   };
   
   // Function to get data by selecting a single row
-  this.select = function(id) {
+  vm.select = function(id) {
     
-    var found = this.selected.indexOf(id);
+    var found = vm.selected.indexOf(id);
     
-    if(found == -1) this.selected.push(id);
+    if(found == -1) vm.selected.push(id);
     
-    else this.selected.splice(found, 1);
+    else vm.selected.splice(found, 1);
     
   }
 }
@@ -185,4 +187,4 @@ The directives add the `st-selected` class to every row that is selected, so in 
 
 <iframe width="100%" height="550" src="http://embed.plnkr.co/iIVlfFZpmXrRvc7rLkFf" frameborder="0" allowfullscren="allowfullscren"></iframe>
 
-And that’s it! If you think the above can be improved, let me know in the comments below. Hope this was helpful.
+And that’s it! If you have any questions, let me know in the comments below.
