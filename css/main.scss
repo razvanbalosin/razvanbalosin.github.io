@@ -26,6 +26,7 @@ $content-width:    900px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
+$on-mobile:        768px;
 
 
 
@@ -48,7 +49,7 @@ $on-laptop:        800px;
 @import
 		"mixins",
 		"normalize",
-        "base",
-        "layout",
-        "highlighting"
+    "base",
+    "layout",
+    "highlighting"
 ;

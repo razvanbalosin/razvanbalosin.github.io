@@ -2,67 +2,158 @@
  * Site header
  */
 .site-header {
-    min-height: 56px;
-    background: #f5f6f5;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  background: #fff;
+  height: 100%;
+  width: 340px;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
-}
+  .card {
+    background-image: url(/assets/img/side-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 200px;
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
+    .top-bar {
+      height: 25px;
+      background: rgba(0, 0, 0, 0.1);
     }
-}
 
-.site-avatar {
-    max-width: 45px;
-    display: inline-block;
-    float: left;
-    line-height: 51px;
-    margin-right: 5px;
+    .site-avatar {
+      max-width: 80px;
+      display: inline-block;
+      float: left;
+      margin: 39px 0 0 20px;
 
-    > img {
-        @include vendor(border-radius, 5px);
+      > img {
+        @include vendor(border-radius, 50%);
+      }
     }
+
+    .site-title {
+      font-size: 26px;
+      letter-spacing: -1px;
+      margin: 35px 0 0 20px;
+      float: left;
+
+      &,
+      &:visited {
+          color: #e64d43;
+      }
+    }
+
+    .site-description {
+      float: left;
+      color: #fff;
+      text-align: left;
+      margin-left: 20px;
+      max-width: 210px;
+      font-size: 1em;
+    }
+  }
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+  ul {
+    margin-top: 10px;
 
+    li {
+      position: relative;
+      text-align: left;
+
+      a {
+        color: #212121;
+        background-color: transparent;
+        display: block;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 56px 0 16px;
+        font-weight: 500;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #212121;
+          background-color: #e0e0e0;
+
+          i {
+            color: #e64d43;
+          }
+        }
+
+        i {
+          display: inline-block;
+          margin-right: 16px;
+          min-width: 40px;
+          width: 40px;
+          text-align: left;
+          font-size: 20px;
+          color: #757575;
+        }
+      }
+    }
+  }
+}
+
+@include media-query($on-mobile) {
+  .site-header {
+    width: 100%;
+    position: relative;
+
+    .card {
+      min-height: auto;
+
+      .site-avatar {
+        float: none;
+        margin: 10px 0 0 0;
+      }
+
+      .site-title {
+        float: none;
+        display: block;
+        margin: 10px 0 0 0;
+        padding-bottom: 10px;
+      }
+
+      .site-description {
+        display: none;
+      }
+    }
+  }
+
+  .site-nav {
     ul {
-      display: inline-block;
+      margin: 0;
 
       li {
         display: inline-block;
 
-        &:not(:first-child) {
-          margin-left:20px;
+        a {
+          padding: 0 16px;
+
+          i {
+            display: none;
+          }
         }
       }
     }
-    .menu-icon {
-        display: none;
+  }
+
+  .page-content {
+    margin: 15px 0 0 0 !important;
+
+    .wrapper {
+      margin: 0 15px 0 15px !important;
     }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
+  }
 }
 
 
@@ -142,6 +233,7 @@
  */
 .page-content {
     padding: 0;
+    margin: 0 0 0 340px;
 
     .home {
         padding-top: 40px;

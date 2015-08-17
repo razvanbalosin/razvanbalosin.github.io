@@ -10,8 +10,9 @@ html {
 }
 body {
   font: 400 15px/1.5 'Helvetica Neue', Helvetica, Arial;
-  background: #fff;
+  background: #f4f4f4;
   color: #444;
+  min-height: 100vh;
 }
 a {
   color: #444;
@@ -87,12 +88,10 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    max-width: 800px;
+    padding: 0 35px 15px;
+    background: #fff;
+    margin-left: 20px;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -189,7 +188,8 @@ blockquote {
 .post__title,
 .page__title {
   font-size: 30px;
-  margin: 35px 0 0;
+  margin: 0;
+  padding-top: 35px;
 }
 .page__title {
   padding: 0 0 10px;
