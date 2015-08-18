@@ -340,3 +340,53 @@ body.fourzerofour {
   }
 
 }
+
+.work {
+  width: 300px;
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+
+  .desc {
+    display: block;
+    text-align: left;
+    color: #C1C5C8;
+    font-weight: 600;
+    font-size: 10px;
+    padding-left: 2px;
+    text-transform: uppercase;
+  }
+
+  .work-link {
+    background-color: #664a86;
+    border: 1px solid #eee;
+    display: block;
+    margin-bottom: 24px;
+    position: relative;
+
+    .work-icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 10px;
+      max-width: 38px;
+    }
+
+    .info {
+      margin-left: 56px;
+      background-color: #fff;
+      padding: 24px;
+      font-size: 13px;
+      line-height: 24px;
+      text-align: left;
+
+      .title {
+        font-weight: 700;
+      }
+
+      .subtitle {
+        color: #757575;
+      }
+    }
+  }
+}
