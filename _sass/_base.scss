@@ -67,6 +67,23 @@ p {
   }
 }
 
+
+li {
+  > code {
+    background-color: #f5f6f5;
+    padding: 1px 5px;
+    @include vendor(border-radius, 3px);
+  }
+}
+
+em {
+  > code {
+    background-color: #f5f6f5;
+    padding: 1px 5px;
+    @include vendor(border-radius, 3px);
+  }
+}
+
 code {
     padding: 1px 5px;
 }
@@ -163,6 +180,11 @@ blockquote {
   font-size: 12px;
   padding: 0 0 10px;
 }
+
+.post a {
+  color: #e64d43;
+}
+
 .post,
 .page {
   h3 {
