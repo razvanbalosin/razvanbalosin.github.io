@@ -2,6 +2,7 @@ _site
 _plugins
 node_modules
 _drafts
+rafts
 .DS_Store
 .tmp
 .sass-cache
